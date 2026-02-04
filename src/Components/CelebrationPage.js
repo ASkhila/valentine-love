@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "../styles/CelebrationPage.css";
-import loveMusic from "../assets/02 - Oura Ammaka Chella - SenSongsMp3.co.mp3";
+import loveMusic from "../assets/love.mp3";
 
 export default function CelebrationPage() {
   const hearts = new Array(20).fill("❤️");
