@@ -2,16 +2,15 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/LoveQuestion.css";
 
+
 export default function LoveQuestion() {
   const navigate = useNavigate();
 
   const [noPosition, setNoPosition] = useState({ x: 200, y: 200 });
-  
+
   const [showNo, setShowNo] = useState(true);
 
   const moveNoButton = () => {
-
-
     const x = Math.random() * (window.innerWidth - 150);
     const y = Math.random() * (window.innerHeight - 80);
     setNoPosition({ x, y });
@@ -37,7 +36,7 @@ export default function LoveQuestion() {
               top: noPosition.y,
             }}
           >
-            NO 💔   
+            NO 💔
           </button>
         )}
       </div>
