@@ -8,7 +8,7 @@ export default function CelebrationPage() {
   useEffect(() => {
     const audio = new Audio(loveMusic);
     audio.loop = true;
-    audio.volume = 0.4; // soft romantic sound
+    audio.volume = 0.4;
     audio.play().catch(() => {});
   }, []);
 
