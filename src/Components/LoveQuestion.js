@@ -2,13 +2,10 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/LoveQuestion.css";
 
-
 export default function LoveQuestion() {
   const navigate = useNavigate();
 
   const [noPosition, setNoPosition] = useState({ x: 200, y: 200 });
-
-  const [showNo, setShowNo] = useState(true);
 
   const moveNoButton = () => {
     const x = Math.random() * (window.innerWidth - 150);
@@ -26,19 +23,17 @@ export default function LoveQuestion() {
           YES 💖
         </button>
 
-        {showNo && (
-          <button
-            className="noBtn"
-            onMouseEnter={moveNoButton}
-            onClick={moveNoButton}
-            style={{
-              left: noPosition.x,
-              top: noPosition.y,
-            }}
-          >
-            NO 💔
-          </button>
-        )}
+        <button
+          className="noBtn"
+          onMouseEnter={moveNoButton}
+          onClick={moveNoButton}
+          style={{
+            left: noPosition.x,
+            top: noPosition.y,
+          }}
+        >
+          NO 💔
+        </button>
       </div>
     </div>
   );
